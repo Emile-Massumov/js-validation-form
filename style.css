@@ -48,6 +48,10 @@ label {
   display: block;
   margin-bottom: 5px;
 }
+
+input:focus {
+  border: 2px solid #f2796e;
+}
 /**
 * ! style rules for form icons
 **/
@@ -84,6 +88,13 @@ button {
   color: #fff;
   border: #f2796e 2px solid;
   font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow:2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.7s ease;
+}
+button:hover {
+  opacity: 0.7;
 }
 
 

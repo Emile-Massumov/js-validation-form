@@ -13,14 +13,21 @@ let username = id("username"),
  form.addEventListener("submit", (e) => {
      e.preventDefault();
      
-     if(username.value === "") {
-         errorMsg[0].innerHTML = "User Name cannot be blank";
-         failureIcon[0].style.opacity = "1";
-         successIcon[0].style.opacity = "0";
-          }else{ 
-              errorMsg[0].innerHTML = "";
-              failureIcon[0].style.opacity = "0";
-              successIcon[0].style.opacity = "1";
-     }
+     engine (email, 1, "Email cannot be blank");
+     
+     
  });
+
+ let engine = (id, serial, message) => {
+    if(id.value === "") {
+        errorMsg[serial].innerHTML = message;
+        failureIcon[serial].style.opacity = "1";
+        successIcon[serial].style.opacity = "0";
+         }else{ 
+             errorMsg[serial].innerHTML = "";
+             failureIcon[serial].style.opacity = "0";
+             successIcon[serial].style.opacity = "1";
+
+ }
+};
 
